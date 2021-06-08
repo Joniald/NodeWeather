@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hds = require("hbs");
+const port = process.env.PORT || 3500 ;
 
 // paths
 const publicPath = path.join(__dirname, "../public");
@@ -97,6 +98,6 @@ app.get("*", (req,res)=>{
 
 
 // portal
-app.listen(3500, ()=>{
-    console.log("Server is up on port 3500")
+app.listen(port, ()=>{
+    console.log("Server is up on port" + port)
 })
